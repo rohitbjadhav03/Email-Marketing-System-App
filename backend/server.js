@@ -12,10 +12,14 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",                           // local dev
+      "https://email-marketing-system-app.vercel.app",   // deployed frontend
+    ],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
