@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",                           // local dev
-      "https://email-marketing-system-app.vercel.app",   // deployed frontend
+      "https://email-marketing-system-app.vercel.app/",   // deployed frontend
     ],
     credentials: true,
   })
